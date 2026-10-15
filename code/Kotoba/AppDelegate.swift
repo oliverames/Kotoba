@@ -6,7 +6,7 @@
 import UIKit
 
 // App group ID
-let APP_GROUP_ID = "group.com.willhains.Kotoba"
+let APP_GROUP_ID = "group.com.amesconsulting.Kotoba"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate

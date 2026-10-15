@@ -316,7 +316,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6F459592460E15100E2174D /* Build configuration list for PBXNativeTarget "ShareExtension" */;
 			buildPhases = (
-				B68C1AD725134F57000019CD /* ShellScript */,
 				B6F459472460E15100E2174D /* Sources */,
 				B6F459482460E15100E2174D /* Frameworks */,
 				B6F459492460E15100E2174D /* Resources */,
@@ -334,7 +333,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE918C691A22A5F5006043CF /* Build configuration list for PBXNativeTarget "Kotoba" */;
 			buildPhases = (
-				B680288724965C8600FD5780 /* ShellScript */,
 				B6A919572478F32800B08C37 /* ShellScript */,
 				BE918C461A22A5F5006043CF /* Sources */,
 				BE918C471A22A5F5006043CF /* Frameworks */,
@@ -400,23 +398,23 @@
 				TargetAttributes = {
 					B6F4594A2460E15100E2174D = {
 						CreatedOnToolsVersion = 11.4.1;
-						DevelopmentTeam = 8B38X92RJ6;
+						DevelopmentTeam = 84M4ZF255G;
 						ProvisioningStyle = Automatic;
 					};
 					BE918C491A22A5F5006043CF = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 8B38X92RJ6;
+						DevelopmentTeam = 84M4ZF255G;
 						LastSwiftMigration = 1120;
 					};
 					BEA413B61D1CABB600D177C2 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 8B38X92RJ6;
+						DevelopmentTeam = 84M4ZF255G;
 						LastSwiftMigration = 1120;
 						TestTargetID = BE918C491A22A5F5006043CF;
 					};
 					BEB2324B1D1DD3B800369560 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 8B38X92RJ6;
+						DevelopmentTeam = 84M4ZF255G;
 						LastSwiftMigration = 1120;
 						TestTargetID = BE918C491A22A5F5006043CF;
 					};
@@ -486,40 +484,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B680288724965C8600FD5780 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "#!/bin/bash\nbuildNumber=$(git show -s --format=format:%at HEAD)\necho \"Build number = \" $buildNumber\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n";
-		};
-		B68C1AD725134F57000019CD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "#!/bin/bash\nbuildNumber=$(git show -s --format=format:%at HEAD)\necho \"Build number = \" $buildNumber\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n";
-		};
 		B6A919572478F32800B08C37 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -682,16 +646,17 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 8B38X92RJ6;
+				DEVELOPMENT_TEAM = 84M4ZF255G;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ShareExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willhains.Kotoba.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amesconsulting.Kotoba.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -704,6 +669,9 @@
 		B6F459582460E15100E2174D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Kotoba Share Extension App Store";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -711,16 +679,16 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 8B38X92RJ6;
+				DEVELOPMENT_TEAM = 84M4ZF255G;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ShareExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willhains.Kotoba.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amesconsulting.Kotoba.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -842,15 +810,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-red";
 				CODE_SIGN_ENTITLEMENTS = Kotoba/Kotoba.entitlements;
-				CURRENT_PROJECT_VERSION = 1592141211;
-				DEVELOPMENT_TEAM = 8B38X92RJ6;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 84M4ZF255G;
 				INFOPLIST_FILE = Kotoba/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Kotoba;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willhains.Kotoba;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amesconsulting.Kotoba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -866,18 +834,21 @@
 		BE918C6B1A22A5F5006043CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Kotoba App Store";
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-red";
 				CODE_SIGN_ENTITLEMENTS = Kotoba/Kotoba.entitlements;
-				CURRENT_PROJECT_VERSION = 1592141211;
-				DEVELOPMENT_TEAM = 8B38X92RJ6;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 84M4ZF255G;
 				INFOPLIST_FILE = Kotoba/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Kotoba;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willhains.Kotoba;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amesconsulting.Kotoba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -897,11 +868,11 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 8B38X92RJ6;
+				DEVELOPMENT_TEAM = 84M4ZF255G;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = KotobaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willhains.KotobaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amesconsulting.KotobaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kotoba.app/Kotoba";
@@ -916,11 +887,11 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 8B38X92RJ6;
+				DEVELOPMENT_TEAM = 84M4ZF255G;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = KotobaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willhains.KotobaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amesconsulting.KotobaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -933,11 +904,11 @@
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 8B38X92RJ6;
+				DEVELOPMENT_TEAM = 84M4ZF255G;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = KotobaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willhains.KotobaUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amesconsulting.KotobaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Kotoba;
@@ -950,11 +921,11 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 8B38X92RJ6;
+				DEVELOPMENT_TEAM = 84M4ZF255G;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = KotobaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willhains.KotobaUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amesconsulting.KotobaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
