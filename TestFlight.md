@@ -39,7 +39,7 @@ The export options enforce internal-only TestFlight distribution. After Apple pr
 
 ## Verified on October 15, 2026
 
-Version 2.0 (1) passed a signed device archive, strict signature checks for both targets, and Apple upload processing. Apple reports VALID, INTERNAL_ONLY, and READY_FOR_BETA_TESTING. External testing is NOT_APPLICABLE. The build is assigned to Kotoba Internal Testers.
+Version 2.0 (1) passed a signed device archive, strict signature checks for both targets, and Apple upload processing. Apple reports VALID, INTERNAL_ONLY, and READY_FOR_BETA_TESTING. External testing is NOT_APPLICABLE. The build is assigned to Kotoba Internal Testers. Oliver Ames (oliver@ames.consulting) is the sole tester, with status Invited. Accept the invitation in TestFlight on an iPhone running iOS 18 or later.
 
 The Release app also built, installed, and opened to the word-entry screen in the iOS simulator. Physical-device installation, dictionary lookup, share-sheet operation, and iCloud synchronization still require device testing.
 
