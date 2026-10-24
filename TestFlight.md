@@ -44,3 +44,7 @@ Version 2.0 (1) passed a signed device archive, strict signature checks for both
 The Release app also built, installed, and opened to the word-entry screen in the iOS simulator. Physical-device installation, dictionary lookup, share-sheet operation, and iCloud synchronization still require device testing.
 
 Apple accepted the upload with a warning about the upstream experimental chock.lproj localization. The existing upstream BartyCrouch and storyboard warnings also remain.
+
+## Verified on October 24, 2026
+
+Version 2.0 (2) is a refresh build cut from master at 31b3526 with no app changes; only CURRENT_PROJECT_VERSION changed to 2 for both targets. The Release archive was signed with Apple Distribution (team 84M4ZF255G) using the Kotoba App Store and Kotoba Share Extension App Store profiles, and both bundles reported 2.0 (2). Apple reports VALID, INTERNAL_ONLY, READY_FOR_BETA_TESTING, with external testing NOT_APPLICABLE. The build was assigned to Kotoba Internal Testers through the API (POST /v1/betaGroups/{id}/relationships/builds returned 204). The same chock.lproj locale warning appeared at upload.
